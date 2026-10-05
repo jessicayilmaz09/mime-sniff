@@ -36,3 +36,10 @@ byte-derived, check that flag.
   `TypeError`.
 - The extension fallback is case-insensitive on the extension but only fires
   when no byte signature matched.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
