@@ -1,6 +1,6 @@
 [project]
 name = "mime-sniff"
-version = "0.1.3"
+version = "0.1.4"
 description = "Detect content type from the leading bytes, not the extension."
 requires-python = ">=3.10"
 dependencies = []
